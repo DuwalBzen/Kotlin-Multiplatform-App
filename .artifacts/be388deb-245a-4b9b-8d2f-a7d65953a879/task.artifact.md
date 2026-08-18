@@ -1,0 +1,3 @@
+- `[x]` Update `libs.versions.toml` with correct `composeIcons` version
+- `[x]` Sync Gradle
+- `[x]` Verify build for `:app:shared`

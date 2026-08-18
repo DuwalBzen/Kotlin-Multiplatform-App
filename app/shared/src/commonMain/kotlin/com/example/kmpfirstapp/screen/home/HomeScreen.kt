@@ -14,6 +14,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import com.example.kmpfirstapp.model.HomeItem
 import com.example.kmpfirstapp.navigation.Screen
+import com.example.kmpfirstapp.ui.components.layout.HomeBackground
 import org.koin.compose.viewmodel.koinViewModel
 
 
@@ -25,24 +26,31 @@ fun HomeScreen(
 
     val items by viewModel.items.collectAsState()
 
-    LazyVerticalGrid(
-        columns = GridCells.Fixed(2),
-        modifier = Modifier
-            .fillMaxSize()
-            .padding(16.dp),
-        contentPadding = PaddingValues(8.dp),
-        horizontalArrangement = Arrangement.spacedBy(12.dp),
-        verticalArrangement = Arrangement.spacedBy(12.dp)
-    ) {
+    HomeBackground(
+        onMenuClick = {
 
-        items(items) { item ->
+        }
+    ){
+        LazyVerticalGrid(
+            columns = GridCells.Fixed(2),
+            modifier = Modifier
+                .fillMaxSize()
+                .padding(16.dp),
+            contentPadding = PaddingValues(8.dp),
+            horizontalArrangement = Arrangement.spacedBy(12.dp),
+            verticalArrangement = Arrangement.spacedBy(12.dp)
+        ) {
 
-            HomeItemCard(
-                item = item,
-                onClick = {
-                    onItemClick(item)
-                }
-            )
+            items(items) { item ->
+
+                HomeItemCard(
+                    item = item,
+                    onClick = {
+                        onItemClick(item)
+                    }
+                )
+            }
         }
     }
+
 }
