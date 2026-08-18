@@ -27,6 +27,6 @@ fun initializeKoin(
 ) {
     startKoin {
         config()
-        modules(koinModule)
+        modules(koinModule,networkModule)
     }
 }

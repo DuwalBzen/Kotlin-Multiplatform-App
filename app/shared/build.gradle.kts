@@ -3,6 +3,7 @@ import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 plugins {
     alias(libs.plugins.kotlinMultiplatform)
     alias(libs.plugins.androidMultiplatformLibrary)
+    alias(libs.plugins.kotlinxSerialization)
     alias(libs.plugins.composeMultiplatform)
     alias(libs.plugins.composeCompiler)
 }
@@ -45,6 +46,9 @@ kotlin {
             implementation(libs.compose.uiTooling)
             implementation(libs.koin.android)
             implementation(libs.androidx.core.ktx)
+
+            implementation("io.ktor:ktor-client-okhttp:3.2.3")
+
         }
         commonMain.dependencies {
             api(project(":core"))
@@ -62,9 +66,21 @@ kotlin {
             implementation(libs.koin.compose)
             implementation(libs.koin.compose.viewmodel)
             implementation(libs.material.icons.extended)
+
+            //ktor
+            implementation(libs.ktor.client.core)
+            implementation(libs.ktor.client.content.negotiation)
+            implementation(libs.ktor.serialization.kotlinx.json)
+            implementation("io.ktor:ktor-client-core:3.2.3")
+            implementation(libs.ktor.client.content.negotiation)
+            implementation(libs.ktor.serialization.kotlinx.json)
+            implementation(libs.ktor.client.logging)
+
+            //log
+            implementation("co.touchlab:kermit:2.0.4")
         }
         iosMain.dependencies {
-
+            implementation("io.ktor:ktor-client-darwin:2.0.0")
         }
     }
 }
