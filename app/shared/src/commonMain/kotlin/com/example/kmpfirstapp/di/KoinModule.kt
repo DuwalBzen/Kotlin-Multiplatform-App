@@ -1,9 +1,9 @@
 package com.example.kmpfirstapp.di
 
 
-import com.example.kmpfirstapp.data.repository.FakeHomeRepository
-import com.example.kmpfirstapp.data.repository.HomeRepository
-import com.example.kmpfirstapp.ui.home.HomeViewModel
+import com.example.kmpfirstapp.domain.repository.home.FakeHomeRepository
+import com.example.kmpfirstapp.domain.repository.home.HomeRepository
+import com.example.kmpfirstapp.presentation.home.HomeViewModel
 import org.koin.core.context.startKoin
 import org.koin.core.module.dsl.singleOf
 import org.koin.core.module.dsl.viewModelOf

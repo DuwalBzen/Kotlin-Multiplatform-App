@@ -1,9 +1,9 @@
-package com.example.kmpfirstapp.ui.home
+package com.example.kmpfirstapp.presentation.home
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.kmpfirstapp.data.repository.HomeRepository
-import com.example.kmpfirstapp.data.repository.UnsplashRepository
+import com.example.kmpfirstapp.domain.repository.home.HomeRepository
+import com.example.kmpfirstapp.domain.repository.unsplash.UnsplashRepository
 import com.example.kmpfirstapp.domain.model.ImageItem
 import com.example.kmpfirstapp.model.HomeItem
 import com.example.kmpfirstapp.util.RequestState

@@ -1,6 +1,5 @@
-package com.example.kmpfirstapp.data.repository
+package com.example.kmpfirstapp.domain.repository.unsplash
 
-import com.example.kmpfirstapp.data.remote.dto.UnsplashPhotoDto
 import com.example.kmpfirstapp.data.response.SearchPhotosResponse
 import com.example.kmpfirstapp.network.ApiRoutes
 import io.ktor.client.HttpClient

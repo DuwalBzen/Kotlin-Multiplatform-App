@@ -1,4 +1,4 @@
-package com.example.kmpfirstapp.ui.components.layout
+package com.example.kmpfirstapp.presentation.components.layout
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Row

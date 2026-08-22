@@ -1,4 +1,4 @@
-package com.example.kmpfirstapp.ui.home
+package com.example.kmpfirstapp.presentation.home
 
 
 import androidx.compose.foundation.layout.Column

@@ -1,4 +1,4 @@
-package com.example.kmpfirstapp.ui.kangi
+package com.example.kmpfirstapp.presentation.kangi
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.PaddingValues

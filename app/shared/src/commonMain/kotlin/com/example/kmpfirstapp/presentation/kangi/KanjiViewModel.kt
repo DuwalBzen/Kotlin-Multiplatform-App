@@ -1,8 +1,9 @@
-package com.example.kmpfirstapp.ui.kangi
+package com.example.kmpfirstapp.presentation.kangi
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.kmpfirstapp.data.db.entity.KanjiEntity
+import com.example.kmpfirstapp.domain.repository.kanji.KanjiRepository
 import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.stateIn

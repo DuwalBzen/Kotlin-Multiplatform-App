@@ -1,6 +1,5 @@
-package com.example.kmpfirstapp.ui.kangi
+package com.example.kmpfirstapp.domain.repository.kanji
 
-import com.example.kmpfirstapp.data.db.dao.KanjiDao
 import com.example.kmpfirstapp.data.db.entity.KanjiEntity
 import kotlinx.coroutines.flow.Flow
 

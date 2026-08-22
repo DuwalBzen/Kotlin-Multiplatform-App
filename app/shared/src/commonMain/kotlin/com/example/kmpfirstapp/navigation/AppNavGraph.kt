@@ -5,8 +5,8 @@ import androidx.compose.runtime.Composable
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import com.example.kmpfirstapp.ui.home.HomeScreen
-import com.example.kmpfirstapp.ui.kangi.KanjiScreen
+import com.example.kmpfirstapp.presentation.home.HomeScreen
+import com.example.kmpfirstapp.presentation.kangi.KanjiScreen
 
 
 @Composable

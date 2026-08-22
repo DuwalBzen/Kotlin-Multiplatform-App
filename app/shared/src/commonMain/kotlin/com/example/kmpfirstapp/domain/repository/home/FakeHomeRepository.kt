@@ -1,4 +1,4 @@
-package com.example.kmpfirstapp.data.repository
+package com.example.kmpfirstapp.domain.repository.home
 
 import com.example.kmpfirstapp.model.HomeItem
 import com.example.kmpfirstapp.navigation.Screen

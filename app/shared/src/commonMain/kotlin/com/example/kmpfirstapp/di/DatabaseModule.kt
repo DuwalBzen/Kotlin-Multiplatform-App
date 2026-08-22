@@ -2,9 +2,9 @@ package com.example.kmpfirstapp.di
 
 import com.example.kmpfirstapp.data.db.dao.KanjiDao
 import com.example.kmpfirstapp.data.db.database.AppDatabase
-import com.example.kmpfirstapp.ui.kangi.FakeKanjiRepository
-import com.example.kmpfirstapp.ui.kangi.KanjiRepository
-import com.example.kmpfirstapp.ui.kangi.KanjiViewModel
+import com.example.kmpfirstapp.domain.repository.kanji.FakeKanjiRepository
+import com.example.kmpfirstapp.domain.repository.kanji.KanjiRepository
+import com.example.kmpfirstapp.presentation.kangi.KanjiViewModel
 import org.koin.core.module.dsl.singleOf
 import org.koin.core.module.dsl.viewModelOf
 import org.koin.dsl.bind
