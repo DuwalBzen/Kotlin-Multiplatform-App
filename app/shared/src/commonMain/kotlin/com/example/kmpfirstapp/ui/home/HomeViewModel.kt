@@ -1,4 +1,4 @@
-package com.example.kmpfirstapp.screen.home
+package com.example.kmpfirstapp.ui.home
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope

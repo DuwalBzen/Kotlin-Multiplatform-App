@@ -3,7 +3,7 @@ package com.example.kmpfirstapp.di
 
 import com.example.kmpfirstapp.data.repository.FakeHomeRepository
 import com.example.kmpfirstapp.data.repository.HomeRepository
-import com.example.kmpfirstapp.screen.home.HomeViewModel
+import com.example.kmpfirstapp.ui.home.HomeViewModel
 import org.koin.core.context.startKoin
 import org.koin.core.module.dsl.singleOf
 import org.koin.core.module.dsl.viewModelOf
@@ -22,11 +22,13 @@ val koinModule = module{
 
 }
 
+
+/*Updated KoinModule.kt to include platformModule in the initializeKoin function. This completes the dependency chain for KanjiViewModel.*/
 fun initializeKoin(
     config: KoinAppDeclaration = {}
 ) {
     startKoin {
         config()
-        modules(koinModule,networkModule)
+        modules(koinModule, networkModule, databaseModule, platformModule)
     }
 }

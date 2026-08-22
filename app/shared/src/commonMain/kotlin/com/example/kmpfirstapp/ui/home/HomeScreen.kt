@@ -1,4 +1,4 @@
-package com.example.kmpfirstapp.screen.home
+package com.example.kmpfirstapp.ui.home
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.PaddingValues
@@ -13,7 +13,6 @@ import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import com.example.kmpfirstapp.model.HomeItem
-import com.example.kmpfirstapp.navigation.Screen
 import com.example.kmpfirstapp.ui.components.layout.HomeBackground
 import org.koin.compose.viewmodel.koinViewModel
 

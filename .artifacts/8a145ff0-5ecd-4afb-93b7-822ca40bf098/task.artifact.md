@@ -1,0 +1,2 @@
+- `[x]` Include `platformModule` in Koin initialization
+- `[x]` Verify the fix
