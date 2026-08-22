@@ -1,6 +1,5 @@
-package com.example.myapplication.ui.components.layout
+package com.example.kmpfirstapp.ui.components.layout
 
-import android.text.Layout
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.RowScope

@@ -2,3 +2,10 @@
 - [x] Add plugin to root `build.gradle.kts`
 - [x] Apply plugin to `app/shared/build.gradle.kts`
 - [x] Verify build status (Plugin applied and synced successfully)
+- [x] Fix package and imports in `AppColumn.kt`
+- [x] Fix package and imports in `AppRow.kt`
+- [x] Disable redundant platform implementation `Platform.apple.kt` (commented out)
+- [x] Disable redundant platform implementation `Platform.native.kt` (commented out)
+- [x] Fix `@Serializable` annotation in `ImageItem.kt`
+- [x] Fix type mismatch in `HomeViewModel.kt`
+- [x] Verify `shared` module build (Success)

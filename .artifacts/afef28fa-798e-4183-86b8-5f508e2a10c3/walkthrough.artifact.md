@@ -1,25 +1,28 @@
-# Walkthrough - Fixing `SerializationException`
+# Walkthrough - Fixing Compilation and Serialization Errors
 
-I have applied the `kotlinx-serialization` compiler plugin to the project to resolve the `SerializationException: Serializer for class 'SearchPhotosResponse' is not found`.
+I have fixed the serialization issues and various compilation errors in the `shared` module, resulting in a successful build.
 
-## Changes
+## Changes Made
 
-### Build Configuration
+### 1. Serialization Setup
+- Added the `kotlinx-serialization` compiler plugin to `libs.versions.toml`.
+- Applied the plugin to the root `build.gradle.kts` and the `app:shared` module.
+- Corrected `ImageItem.kt`: Changed `@Serializer` (incorrect) to `@Serializable`.
 
-#### [libs.versions.toml](file:///C:/Users/bijen duwal/AndroidStudioProjects/Kmpfirstapp/gradle/libs.versions.toml)
-Added the `kotlinxSerialization` plugin definition.
+### 2. UI Component Fixes
+- **AppColumn.kt** & **AppRow.kt**: Corrected the package name and removed Android-specific imports (`android.text.Layout`) that were causing errors in `commonMain`.
 
-#### [build.gradle.kts (root)](file:///C:/Users/bijen duwal/AndroidStudioProjects/Kmpfirstapp/build.gradle.kts)
-Added the plugin to the root build file to make it available for subprojects.
+### 3. Platform Implementation Cleanup
+- Commented out redundant `actual class Platform` definitions in `appleMain` and `nativeMain` that were conflicting with the project's `expect fun getPlatform()` pattern.
 
-#### [app/shared/build.gradle.kts](file:///C:/Users/bijen duwal/AndroidStudioProjects/Kmpfirstapp/app/shared/build.gradle.kts)
-Applied the plugin to the `shared` module where the `@Serializable` classes are defined.
+### 4. HomeViewModel Fixes
+- Corrected a type mismatch in `searchImages`. The code now correctly maps the `SearchPhotosResponse` (containing `UnsplashPhotoDto`) to the expected `List<ImageItem>` and wraps it in a `RequestState.Success`.
 
 ## Verification Results
 
 ### Automated Tests
-- Triggered a Gradle Sync which finished successfully, confirming that the plugin is correctly resolved and applied.
-- Attempted a build (`:app:shared:assemble`). While there are pre-existing compilation errors in the project (unrelated to serialization), the serialization plugin is now correctly configured.
+- Ran `./gradlew :app:shared:assemble` which now **finishes successfully**.
+- Gradle Sync is successful.
 
-> [!NOTE]
-> The project currently has some pre-existing compilation errors in `AppColumn.kt` and `AppRow.kt` (invalid `android.*` imports in `commonMain`) and some `actual`/`expect` mismatches in `Platform.kt`. These should be addressed separately as they are unrelated to the serialization issue.
+## Summary
+The `shared` module is now fully compilable and the serialization framework is correctly integrated.

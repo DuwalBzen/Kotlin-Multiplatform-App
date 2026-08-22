@@ -1,0 +1,4 @@
+- [ ] Update SDK and tool versions in `libs.versions.toml`
+- [ ] Run Gradle Sync
+- [ ] Verify `android.content.Context` resolution
+- [ ] Build project to confirm fix

@@ -12,6 +12,8 @@ kotlin {
 }
 dependencies {
     implementation(project(":app:shared"))
+    implementation(libs.androidx.room3.runtime)
+
 
     implementation(libs.androidx.activity.compose)
     implementation(libs.koin.android)
