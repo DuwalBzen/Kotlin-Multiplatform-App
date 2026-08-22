@@ -1,2 +1,3 @@
 - `[x]` Include `platformModule` in Koin initialization
 - `[x]` Verify the fix
+- `[x]` Align Ktor versions for iOS/Android using Version Catalog

@@ -57,7 +57,7 @@ kotlin {
             implementation(libs.koin.android)
             implementation(libs.androidx.core.ktx)
 
-            implementation("io.ktor:ktor-client-okhttp:3.2.3")
+            implementation(libs.ktor.client.okhttp)
 
         }
         commonMain.dependencies {
@@ -81,9 +81,6 @@ kotlin {
             implementation(libs.ktor.client.core)
             implementation(libs.ktor.client.content.negotiation)
             implementation(libs.ktor.serialization.kotlinx.json)
-            implementation("io.ktor:ktor-client-core:3.2.3")
-            implementation(libs.ktor.client.content.negotiation)
-            implementation(libs.ktor.serialization.kotlinx.json)
             implementation(libs.ktor.client.logging)
 
             //log
@@ -94,7 +91,7 @@ kotlin {
             implementation(libs.androidx.sqlite.bundled)
         }
         iosMain.dependencies {
-            implementation("io.ktor:ktor-client-darwin:2.0.0")
+            implementation(libs.ktor.client.darwin)
             implementation(libs.androidx.room3.runtime)
             implementation(libs.androidx.sqlite.bundled)
         }
